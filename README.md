@@ -10,4 +10,4 @@
 
  <div erm uhh a website> 
 
- <div https://github.com/RD-github31/RD-github31.github.io/blob/master/6e767d0e8fd092688299388069dd0d48.png?raw=true>
+<img src="https://github.com/RD-github31/RD-github31.github.io/blob/master/6e767d0e8fd092688299388069dd0d48.png?raw=true>
