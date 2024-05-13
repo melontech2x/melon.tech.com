@@ -31,6 +31,55 @@
 </body>
 </html>
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>MP3 to Opus Converter</h1>
+<input type="file" id="audioInput" accept=".mp3">
+<button onclick="convertToOpus()">Convert to Opus</button>
+<a id="downloadLink" style="display:none;">Download Opus file</a>
+
+<script>
+function convertToOpus() {
+    var input = document.getElementById('audioInput');
+    var file = input.files[0];
+    if (file) {
+        var reader = new FileReader();
+        reader.onload = function(event) {
+            var audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            audioContext.decodeAudioData(event.target.result, function(buffer) {
+                audioContext.close();
+                var opusBlob = encodeOpus(buffer);
+                var downloadLink = document.getElementById('downloadLink');
+                downloadLink.href = URL.createObjectURL(opusBlob);
+                downloadLink.download = 'output.opus';
+                downloadLink.style.display = 'block';
+            });
+        };
+        reader.readAsArrayBuffer(file);
+    }
+}
+
+function encodeOpus(audioBuffer) {
+    // Use opus.js or similar library to encode the audio buffer to Opus format
+    // Here is a simplified example without error handling
+    var opusEncoder = new OggOpusEncoder();
+    return new Blob([opusEncoder.encode(audioBuffer)], { type: 'audio/opus' });
+}
+</script>
+<!-- Include opus.js or a similar library that provides Opus encoding functionality -->
+<script src="https://cdn.jsdelivr.net/npm/opus-recorder/dist/encoderWorker.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/opus-recorder"></script>
+</body>
+</html>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
