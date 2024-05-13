@@ -31,6 +31,34 @@
 </body>
 </html>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<h1>Text Reverse Tool</h1>
+<textarea id="inputText" rows="4" cols="50"></textarea>
+<button onclick="reverseText()">Reverse Text</button>
+<p>Reversed Text:</p>
+<p id="reversedText"></p>
+
+<script>
+function reverseText() {
+    // Get the input text
+    var input = document.getElementById("inputText").value;
+    
+    // Reverse the text
+    var reversed = input.split("").reverse().join("");
+    
+    // Display the reversed text
+    document.getElementById("reversedText").innerText = reversed;
+}
+</script>
+</body>
+</html>
+
 
 
 <audio controls>
