@@ -1,0 +1,105 @@
+<html><head><base href="https://anti-femboy-anti-furry-quiz.example.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-Femboy and Anti-Furry Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .question {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        button {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        #yesButton {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #noButton {
+            background-color: #f44336;
+            color: white;
+        }
+        #yesButton:hover {
+            background-color: #45a049;
+        }
+        #noButton:hover {
+            background-color: #da190b;
+        }
+        #result {
+            margin-top: 1rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Anti-Femboy and Anti-Furry Quiz</h1>
+        <div class="question">
+            Is being anti-femboy and anti-furry bad for you?
+        </div>
+        <div class="buttons">
+            <button id="yesButton" onclick="showResult('yes')">Yes</button>
+            <button id="noButton" onclick="showResult('no')">No</button>
+        </div>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function showResult(answer) {
+            const resultElement = document.getElementById('result');
+            if (answer === 'yes') {
+                resultElement.textContent = "That's correct! Being anti-femboy and anti-furry can indeed be harmful.";
+                resultElement.style.color = '#4CAF50';
+            } else {
+                resultElement.textContent = "I'm sorry, but that's not correct. Being anti-femboy and anti-furry can be harmful.";
+                resultElement.style.color = '#f44336';
+            }
+        }
+
+        // Easter egg: Konami code to show a supportive message
+        let konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+        let konamiIndex = 0;
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === konamiCode[konamiIndex]) {
+                konamiIndex++;
+                if (konamiIndex === konamiCode.length) {
+                    alert("Remember: Diversity is beautiful! Everyone deserves respect and acceptance. 💖🌈");
+                    konamiIndex = 0;
+                }
+            } else {
+                konamiIndex = 0;
+            }
+        });
+    </script>
+</body>
+</html>
