@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="melon.tech's website">
+    <meta property="og:description" content="may website :3   (poered by cgcristi fr)">
+    <title>may website :3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('69186.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .marquee-container {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .custom-marquee {
+            background: black;
+            border: white 3px solid;
+            color: white;
+            padding: 8px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 120px auto 40px;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .discord-status {
+            margin: 30px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .spotify-embed {
+            margin: 30px 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .text-reverse-tool {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .text-reverse-tool textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 1em;
+        }
+
+        .text-reverse-tool button {
+            background: #4a4a4a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s ease;
+        }
+
+        .text-reverse-tool button:hover {
+            background: #333;
+        }
+
+        .media-container {
+            margin: 30px 0;
+        }
+
+        .media-container video,
+        .media-container audio {
+            width: 100%;
+            border-radius: 12px;
+            margin: 15px 0;
+        }
+
+        .image-container {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .image-container:hover img {
+            transform: scale(0.5);
+        }
+
+        .additional-image {
+            max-width: 500px;
+            height: auto;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            background: rgba(255, 255, 255, 0.9);
+            margin-top: 40px;
+            border-radius: 0 0 30px 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee-container">
+        <marquee class="custom-marquee" direction="right" behavior="alternate">
+            omagad aaaaa discord 🤯🤯🤯🤯🤯
+        </marquee>
+    </div>
+
+    <div class="container">
+        <div class="profile-section">
+            <img class="profile-image" src="https://cdn.discordapp.com/avatars/1138700937729413230/f073bd276f84921e91324c26a2d83939.png?size=512" alt="Profile Picture">
+            <div>
+                <h1>Welcome to melon.tech</h1>
+                <p>I'm melon.tech. I like Blåhaj.</p>
+                <p>Mine is Linux.</p>
+            </div>
+        </div>
+
+        <div class="discord-status">
+            <img src="https://lanyard.cnrad.dev/api/1138700937729413230" alt="Discord Status" style="width: 100%;">
+        </div>
+
+        <div class="spotify-embed">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/22zw6m2O6LoD3mVEcCUwiF?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
+        <div class="text-reverse-tool">
+            <h1>Text Reverse Tool</h1>
+            <textarea id="inputText" rows="4" cols="50"></textarea>
+            <button onclick="reverseText()">Reverse Text</button>
+            <p>Reversed Text:</p>
+            <p id="reversedText"></p>
+        </div>
+
+        <div class="media-container">
+            <video controls>
+                <source src="youtube_1nuePnhhZk4_854x462_h264.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <audio controls>
+                <source src="aš Pingvinas.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <video controls>
+                <source src="uh.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <img class="additional-image" src="https://i.redd.it/mc4hto0xq77b1.jpg" alt="Additional Image">
+
+        <div class="image-container">
+            <img src="RD.jpg" alt="Collapsing Image">
+        </div>
+
+        <p>cg discord status bcz why not</p>
+        <div class="discord-status">
+            <img src="https://lanyard.cnrad.dev/api/680823919338717224" alt="Discord Status" style="width: 100%;">
+        </div>
+        <p>"femboy and furries are perfect 😍" - cgcristi 2024.</p>
+
+        <footer>powered by cgcristi (domain + helping + etc.) - github pages too</footer>
+    </div>
+
+    <script>
+        function reverseText() {
+            const input = document.getElementById("inputText").value;
+            const reversed = input.split("").reverse().join("");
+            document.getElementById("reversedText").innerText = reversed;
+        }
+    </script>
+</body>
+</html>
